@@ -1,0 +1,25 @@
+[Unit]
+Description=shiftshapr.com site API (Express)
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/web/shiftshapr.com
+Environment=NODE_ENV=production
+Environment=PORT=4011
+Environment=SITE_NAME=shiftshapr
+ExecStart=/usr/bin/node api-server.js
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=shiftshapr-site
+
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/home/ubuntu/web/shiftshapr.com
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,22 @@
+{
+  "name": "shiftshapr-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "shiftshapr.com — static site + Express API (same pattern as nft.xowlz.com)",
+  "main": "api-server.js",
+  "scripts": {
+    "start": "node api-server.js",
+    "dev": "nodemon api-server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
